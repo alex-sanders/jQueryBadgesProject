@@ -5,18 +5,15 @@ $.ajax({
   url: "https://www.codeschool.com/users/Asanders11891.json",
   dataType: 'jsonp',
   success: function(response){
-      //reponse
       addCourses(response.courses.completed);
-
   }
 });
-
 
 
 function addCourses(courses) {
   var $badges = $('#badges');
   courses.forEach(function(course) {
-    $('<div />', {
+    var $course = $('<div />', {
       'class': 'course'
     }).appendTo($badges);
 
@@ -25,7 +22,7 @@ function addCourses(courses) {
     }).appendTo($course);
 
     $('<img />',  {
-      src: source.badge
+      src: course.badge
     }).appendTo($course);
 
     $('<a />',  {
