@@ -2,7 +2,7 @@ $(function() {
 
   // your code will go here
 $.ajax({
-  url: "https://www.codeschool.com/users/Asanders11891",
+  url: "https://www.codeschool.com/users/Asanders11891.json",
   dataType: 'jsonp',
   success: function(response){
       addCourses(response.courses.completed);
