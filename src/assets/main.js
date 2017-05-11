@@ -15,11 +15,25 @@ $.ajax({
 
 function addCourses(courses) {
   var $badges = $('#badges');
-  course.forEach(function(courses) {
+  courses.forEach(function(course) {
     $('<div />', {
       'class': 'course'
     }).appendTo($badges);
 
+    $('<h3 />', {
+      text: course.title
+    }).appendTo($course);
+
+    $('<img />',  {
+      src: source.badge
+    }).appendTo($course);
+
+    $('<a />',  {
+      'class': 'btn btn-primary'
+      href: course.url,
+      target: _blank,
+      text: 'See Course'
+    }).appendTo($course);
   })
 }
 
