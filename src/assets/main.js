@@ -1,14 +1,13 @@
 $(function() {
 
   // your code will go here
-$.ajax({
-  url: "https://www.codeschool.com/users/Asanders11891.json",
+jQuery.ajax({
+  url: "https://www.codeschool.com/users/1357177.json",
   dataType: 'jsonp',
   success: function(response){
       addCourses(response.courses.completed);
   }
 });
-
 
 function addCourses(courses) {
   var $badges = $('#badges');
